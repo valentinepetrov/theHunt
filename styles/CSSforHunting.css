@@ -1,0 +1,752 @@
+html {
+  cursor: url(../images/stoneCursor5.cur), auto;
+}
+
+body {
+  text-align: right;
+  background-image: url(../images/caveSecondVariant.jpg);
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+}
+
+.music {
+  display: none;
+}
+
+.the-main-section {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 250px;
+  top: 400px;
+}
+
+/* cave => */
+
+.block-with-cave {
+  position: absolute;
+}
+
+.cave {
+  stroke-width: 70px;
+}
+
+.the-main-section:hover .entrance {
+  fill: darkorange;
+}
+
+.the-main-section:hover .block-for-cursor {
+  display: none;
+}
+
+/* <= cave */
+
+/* cursor => */
+
+.block-for-cursor {
+  position: absolute;
+  right: 56px;
+  top: -255px;
+}
+
+.cursor {
+  position: absolute;
+  animation-name: cursor-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.path-for-cursor {
+  animation-name: path-for-cursor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes cursor-1 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 0;
+    top: 50px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes path-for-cursor {
+  0% {
+    fill: black;
+  }
+
+  50% {
+    fill: darkred;
+  }
+
+  100% {
+    fill: black;
+  }
+}
+
+/* <= cursor  */
+
+/* hunter => */
+
+.block-for-hunter {
+  position: absolute;
+  right: 40px;
+  top: 45px;
+}
+
+.hunter {
+  position: absolute;
+  opacity: 0;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.the-main-section:hover .hunter {
+  animation-name: hunter;
+  opacity: 1;
+}
+
+.hunter g {
+  fill: darkred;
+}
+
+.hunter-without-legs {
+  position: absolute;
+}
+
+.hunter-first-legs {
+  position: absolute;
+  animation-name: hunter-first-legs;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.hunter-second-legs {
+  position: absolute;
+  animation-name: hunter-second-legs;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hunter {
+  0% {
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    left: -500px;
+    opacity: 0;
+    top: -40px;
+  }
+}
+
+@keyframes hunter-first-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: -6px;
+    top: 0;
+    transform: rotate(-70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes hunter-second-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 6px;
+    top: 0;
+    transform: rotate(70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* <= hunter */
+
+/* female-deer-1 => */
+
+.block-for-female-deer-1 {
+  position: absolute;
+  right: 400px;
+  top: 45px;
+}
+
+.block-for-female-deer-1 {
+  position: absolute;
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-female-deer-1 g {
+  fill: darkred;
+}
+
+.female-deer-without-legs {
+  position: absolute;
+}
+
+.female-deer-first-legs {
+  position: absolute;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.female-deer-second-legs {
+  position: absolute;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.the-main-section:hover .block-for-female-deer-1 {
+  animation-name: block-for-female-deer-1;
+}
+
+.the-main-section:hover .female-deer-first-legs {
+  animation-name: female-deer-first-legs;
+}
+
+.the-main-section:hover .female-deer-second-legs {
+  animation-name: female-deer-second-legs;
+}
+
+@keyframes block-for-female-deer-1 {
+  0% {
+    right: 400px;
+    top: 45px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 900px;
+    top: 45px;
+    opacity: 0;
+  }
+}
+
+@keyframes female-deer-first-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 10px;
+    top: -20px;
+    transform: rotate(-70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes female-deer-second-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 10px;
+    top: -20px;
+    transform: rotate(70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* <= female-deer-1 */
+
+/* female-deer-2 => */
+
+.block-for-female-deer-2 {
+  position: absolute;
+  right: 700px;
+  top: -30px;
+}
+
+.block-for-female-deer-2 {
+  position: absolute;
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-female-deer-2 g {
+  fill: darkred;
+}
+
+.the-main-section:hover .block-for-female-deer-2 {
+  animation-name: block-for-female-deer-2;
+}
+
+@keyframes block-for-female-deer-2 {
+  0% {
+    right: 700px;
+    top: -30px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1400px;
+    top: -245px;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* <= female-deer-2 */
+
+/* female-deer-3 => */
+
+.block-for-female-deer-3 {
+  position: absolute;
+  right: 920px;
+  top: 150px;
+}
+
+.block-for-female-deer-3 {
+  position: absolute;
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-female-deer-3 g {
+  fill: darkred;
+}
+
+.the-main-section:hover .block-for-female-deer-3 {
+  animation-name: block-for-female-deer-3;
+}
+
+@keyframes block-for-female-deer-3 {
+  0% {
+    right: 920px;
+    top: 150px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1420px;
+    top: 350px;
+    opacity: 0;
+    transform: rotate(-40deg);
+  }
+}
+
+/* <= female-deer-3 */
+
+/* female-deer-4 => */
+
+.block-for-female-deer-4 {
+  position: absolute;
+  right: 900px;
+  top: -100px;
+}
+
+.block-for-female-deer-4 {
+  position: absolute;
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-female-deer-4 g {
+  fill: darkred;
+}
+
+.the-main-section:hover .block-for-female-deer-4 {
+  animation-name: block-for-female-deer-4;
+}
+
+@keyframes block-for-female-deer-4 {
+  0% {
+    right: 900px;
+    top: -100px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1400px;
+    top: -600px;
+    opacity: 0;
+    transform: rotate(80deg);
+  }
+}
+
+/* <= female-deer-4 */
+
+/* male-deer-1 => */
+
+.block-for-male-deer-1 {
+  position: absolute;
+  right: 550px;
+  top: -150px;
+}
+
+.block-for-male-deer-1 {
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-male-deer-1 g {
+  fill: darkred;
+}
+
+.male-deer-without-legs {
+  position: absolute;
+}
+
+.male-deer-first-legs {
+  position: absolute;
+  top: 15px;
+  left: 14px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.male-deer-second-legs {
+  position: absolute;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.the-main-section:hover .block-for-male-deer-1 {
+  animation-name: block-for-male-deer-1;
+}
+
+.the-main-section:hover .male-deer-first-legs {
+  animation-name: male-deer-first-legs;
+}
+
+.the-main-section:hover .male-deer-second-legs {
+  animation-name: male-deer-second-legs;
+}
+
+@keyframes block-for-male-deer-1 {
+  0% {
+    right: 550px;
+    top: -150px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 900px;
+    top: -400px;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes male-deer-first-legs {
+  0% {
+    top: 15px;
+    left: 14px;
+  }
+
+  50% {
+    left: 15px;
+    top: -15px;
+    transform: rotate(-70deg);
+  }
+
+  100% {
+    top: 15px;
+    left: 14px;
+  }
+}
+
+@keyframes male-deer-second-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 20px;
+    top: -40px;
+    transform: rotate(70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* <= male-deer-1 */
+
+/* male-deer-2 => */
+
+.block-for-male-deer-2 {
+  position: absolute;
+  right: 650px;
+  top: 250px;
+}
+
+.block-for-male-deer-2 {
+  opacity: 1;
+  animation-duration: 4s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-male-deer-2 g {
+  fill: darkred;
+}
+
+.the-main-section:hover .block-for-male-deer-2 {
+  animation-name: block-for-male-deer-2;
+}
+
+@keyframes block-for-male-deer-2 {
+  0% {
+    right: 650px;
+    top: 250px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1200px;
+    top: 400px;
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+}
+
+/* <= female-deer-2 */
+
+/* small-deer-1 => */
+
+.block-for-small-deer-1 {
+  position: absolute;
+  right: 770px;
+  top: 150px;
+}
+
+.block-for-small-deer-1 {
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-small-deer-1 g {
+  fill: darkred;
+}
+
+.small-deer-without-legs {
+  position: absolute;
+}
+
+.small-deer-first-legs {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.small-deer-second-legs {
+  position: absolute;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.the-main-section:hover .block-for-small-deer-1 {
+  animation-name: block-for-small-deer-1;
+}
+
+.the-main-section:hover .small-deer-first-legs {
+  animation-name: small-deer-first-legs;
+}
+
+.the-main-section:hover .small-deer-second-legs {
+  animation-name: small-deer-second-legs;
+}
+
+@keyframes block-for-small-deer-1 {
+  0% {
+    right: 770px;
+    top: 150px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1320px;
+    top: 350px;
+    opacity: 0;
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes small-deer-first-legs {
+  0% {
+    left: 0px;
+    top: 5px;
+  }
+
+  50% {
+    left: 0px;
+    top: -3px;
+    transform: rotate(-70deg);
+  }
+
+  100% {
+    left: 0px;
+    top: 5px;
+  }
+}
+
+@keyframes small-deer-second-legs {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 10px;
+    top: -5px;
+    transform: rotate(70deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* <= small-deer-1 */
+
+/* small-deer-2 => */
+
+.block-for-small-deer-2 {
+  position: absolute;
+  right: 700px;
+  top: 130px;
+}
+
+.block-for-small-deer-2 {
+  opacity: 1;
+  animation-duration: 6s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.block-for-small-deer-2 g {
+  fill: darkred;
+}
+
+.the-main-section:hover .block-for-small-deer-2 {
+  animation-name: block-for-small-deer-2;
+}
+
+@keyframes block-for-small-deer-2 {
+  0% {
+    right: 700px;
+    top: 130px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 1220px;
+    top: 350px;
+    opacity: 0;
+    transform: rotate(-40deg);
+  }
+}
+
+/* <= small-deer-2 */
